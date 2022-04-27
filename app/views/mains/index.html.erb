@@ -1,0 +1,68 @@
+<%= render 'shared/header' %>
+
+<div class="mainImage">
+  <%= image_tag "main-image.jpg", alt: "メイン画像" %>
+</div>
+
+<div class="hairStyleSection">
+  <h2 class="hStyle">人気の髪型<br><span>HAIR STYLE</span></h2>
+  <div class="loop_wrap">
+    <ul>
+      <li><%= image_tag "hair1.jpg", alt: "髪型サンプル" %></li>
+      <li><%= image_tag "hair2.jpg", alt: "髪型サンプル" %></li>
+      <li><%= image_tag "hair3.jpg", alt: "髪型サンプル" %></li>
+      <li><%= image_tag "hair4.jpg", alt: "髪型サンプル" %></li>
+      <li><%= image_tag "hair5.jpg", alt: "髪型サンプル" %></li>
+      <li><%= image_tag "hair6.jpg", alt: "髪型サンプル" %></li>
+    </ul>
+    <ul>
+      <li><%= image_tag "hair1.jpg", alt: "髪型サンプル" %></li>
+      <li><%= image_tag "hair2.jpg", alt: "髪型サンプル" %></li>
+      <li><%= image_tag "hair3.jpg", alt: "髪型サンプル" %></li>
+      <li><%= image_tag "hair4.jpg", alt: "髪型サンプル" %></li>
+      <li><%= image_tag "hair5.jpg", alt: "髪型サンプル" %></li>
+      <li><%= image_tag "hair6.jpg", alt: "髪型サンプル" %></li>
+    </ul>
+  </div>
+</div>
+
+<div class="newsSection">
+  <h2 class="hStyle">お知らせ<br><span>NEWS</span></h2>
+  <table>
+    <tr>
+      <th><%= "2022.04.20" %></th>
+      <td><%= "5/1はお休みさせていただきます" %></td>
+    </tr>
+    <tr>
+      <th><%= "2022.04.10" %></th>
+      <td><%= "新しい本を入荷しました" %></td>
+    </tr>
+    <tr>
+      <th><%= "2022.04.01" %></th>
+      <td><%= "リニューアルオープンしました" %></td>
+    </tr>
+  </table>
+</div>
+
+<div class="informationSection">
+  <h2 class="hStyle">店舗情報<br><span>INFORMATION</span></h2>
+  <div class="info-main">
+    <div class="left-information">
+      <h3 class="info-title">営業時間</h3>
+      <p class="info-content">火曜日～木曜日 / 12:00～21:00 金曜日 / 12:00～22:00<br>
+        土曜日 / 11:00～20:00 日曜日・祝日 / 11:00～19:00<br>
+        月曜日 / 店休日</p>
+      <h3 class="info-title">TEL</h3>
+      <p class="info-content">00-0000-0000</p>
+      <h3 class="info-title">住所</h3>
+      <p class="info-content">000-0000<br>東京都渋谷区〇〇〇</p>
+    </div>
+    <div class="right-information">
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25931.283161251155!2d139.67510639595952!3d35.66689559822512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cb2eb3108d1%3A0xf11cd9b2395b6677!2z5p2x5Lqs6YO95riL6LC35Yy6!5e0!3m2!1sja!2sjp!4v1651030185319!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>
