@@ -1,0 +1,84 @@
+.row {
+  width: 400px;
+  margin: 0 auto 40px;
+  padding: 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid lightslategray;
+}
+
+.row h2 {
+  font-size: 32px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+  padding-bottom: 24px;
+}
+
+.field label {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+#user_nickname {
+  width: 400px;
+  height: 24px;
+  margin: 8px auto 16px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+} 
+
+.field input[type="email"],
+.field input[type="password"] {
+  width: 400px;
+  height: 24px;
+  margin: 8px auto 16px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+#user_birthday_1i,
+#user_birthday_2i,
+#user_birthday_3i {
+  margin: 8px auto 32px;
+  height: 24px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+#user_birthday_1i {
+  width: 80px;
+}
+
+#user_birthday_2i,
+#user_birthday_3i {
+  width: 50px;
+}
+
+#user_remember_me {
+  margin: 8px auto 32px;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.actions input[type="submit"] {
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.actions input[type="submit"]:hover {
+  opacity: 0.8;
+}
