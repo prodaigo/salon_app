@@ -213,9 +213,6 @@ footer {
 .left-nav li {
   margin-left: 20px;
 }
-.right-nav {
-  
-}
 
 .right-nav li {
   margin-right: 20px;
@@ -228,7 +225,6 @@ footer {
   font-size: 11px;
   padding-bottom: 40px;
   text-align: center;
-  padding-left: 100px;
 }
 
 /* フッター */
