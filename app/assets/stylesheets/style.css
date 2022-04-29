@@ -2,6 +2,14 @@ body {
   padding-top: 40px;
 }
 
+header {
+  width: 100%;
+}
+
+.header-top {
+  margin: 0 auto;
+}
+
 h1 {
   text-align: center;
   font-size: 40px;
@@ -9,15 +17,56 @@ h1 {
   font-weight: normal;
   letter-spacing: 1px;
   line-height: 0.6;
+  width: 300px;
+  margin: 0 auto;
 }
 
 h1 span {
   font-size: 15px;
 }
 
+.lists-right {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: right;
+}
+
+.lists-right li {
+  list-style: none;
+  margin-right: 8px;
+}
+
+.logout,
+.login,
+.sign-up {
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  padding: 4px 10px;
+  font-weight: normal;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+}
+
+.user-nickname {
+  text-decoration: none;
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  border-bottom: 1px solid black;
+  height: 18px;
+  display: inline-block;
+  padding: 6px 0 0;
+  text-align: center;
+}
+
 .globalNavi {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 24px;
   margin-bottom: 40px;
   padding-bottom: 8px;
   border-bottom: 1px solid lightgray;
@@ -38,6 +87,10 @@ h1 span {
 .globalNavi li a {
   text-decoration: none;
   color: #000000;
+}
+
+.globalNavi li a:hover {
+  opacity: 0.6;
 }
 
 .mainImage {
@@ -202,6 +255,10 @@ footer {
 .footer-nav a {
   text-decoration: none;
   color: #000000;
+}
+
+.footer-nav a:hover {
+  opacity: 0.6;
 }
 
 .left-nav {
