@@ -25,6 +25,15 @@
         <%= f.submit "Log in" %>
       </div>
     <% end %>
+
+    <div class="sns-certification">
+      <div class="facebook">
+        <i class="fa-brands fa-facebook"></i><%= link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path, method: :post%>
+      </div>
+      <div class="google">
+        <i class="fa-brands fa-google"></i><%= link_to 'Sign in with Google', user_google_oauth2_omniauth_authorize_path, method: :post%>
+      </div>
+    </div>
   </div>
 </div>
 

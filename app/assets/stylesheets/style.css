@@ -52,6 +52,12 @@ h1 span {
   font-size: 14px;
 }
 
+.logout:hover,
+.login:hover,
+.sign-up:hover {
+  opacity: 0.6;
+}
+
 .user-nickname {
   text-decoration: none;
   color: black;

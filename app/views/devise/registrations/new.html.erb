@@ -16,18 +16,22 @@
         <%= f.email_field :email %>
       </div>
 
-      <div class="field">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
+      <%if @sns_id.present? %>
+        <%= hidden_field_tag :sns_auth, true %>
+      <% else %>
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
 
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+      <% end %>
 
       <div class="field">
         <%= f.label :birthday %><br />
@@ -39,6 +43,15 @@
         <%= f.submit "Sign up" %>
       </div>
     <% end %>
+    
+    <div class="sns-certification">
+      <div class="facebook">
+        <i class="fa-brands fa-facebook"></i><%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, method: :post%>
+      </div>
+      <div class="google">
+        <i class="fa-brands fa-google"></i><%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post%>
+      </div>
+    </div>
   </div>
 </div>
 
