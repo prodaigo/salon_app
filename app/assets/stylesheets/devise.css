@@ -160,9 +160,15 @@
   opacity: 0.8;
 }
 
-.edit-btn a {
+.edit {
   text-decoration: none;
   color: white;
   display: block;
   font-size: 14px;
+}
+
+/* ユーザー編集 */
+
+.edit_user input[type="submit"] {
+  margin-top: 16px;
 }
