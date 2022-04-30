@@ -263,7 +263,7 @@ footer {
   color: #000000;
 }
 
-.footer-nav a:hover {
+.footer-nav li:hover {
   opacity: 0.6;
 }
 
