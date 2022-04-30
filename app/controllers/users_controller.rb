@@ -1,14 +1,14 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:edit, :update]
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :authenticate_user!
+  before_action :set_user
+  before_action :move_to_root
 
   def show
+    move_to_root
   end
 
   def edit
-    unless @user == current_user
-      render :show
-    end
+    move_to_root
   end
 
   def update
@@ -27,5 +27,12 @@ class UsersController < ApplicationController
 
   def user_params
     params.fetch(:user, {}).permit(:nickname, :email)
+  end
+
+  def move_to_root
+    set_user
+    unless @user == current_user  || current_user.admin?
+      redirect_to root_path
+    end
   end
 end
