@@ -1,0 +1,174 @@
+/* サインイン・ログイン共通CSS */
+
+.row {
+  width: 400px;
+  margin: 0 auto 40px;
+  padding: 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid lightslategray;
+}
+
+.row h2 {
+  font-size: 32px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+  padding-bottom: 24px;
+}
+
+.field label {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+.field em {
+  font-family: 'Oswald', sans-serif;
+}
+
+#user_nickname {
+  width: 400px;
+  height: 24px;
+  margin: 8px auto 16px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+} 
+
+.field input[type="email"],
+.field input[type="password"] {
+  width: 400px;
+  height: 24px;
+  margin: 8px auto 16px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+#user_birthday_1i,
+#user_birthday_2i,
+#user_birthday_3i {
+  margin: 8px auto 32px;
+  height: 24px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+#user_birthday_1i {
+  width: 80px;
+}
+
+#user_birthday_2i,
+#user_birthday_3i {
+  width: 50px;
+}
+
+#user_remember_me {
+  margin: 8px auto 32px;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.actions input[type="submit"] {
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.actions input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.sns-certification {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 24px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.facebook,
+.google {
+  border: 2px solid black;
+  padding: 8px 0;
+  font-size: 14px;
+  width: 150px;
+  text-align: center;
+}
+
+.facebook a,
+.google a {
+  text-decoration: none;
+  color: black;
+}
+
+.facebook:hover,
+.google:hover {
+  opacity: 0.6;
+}
+
+/* マイページ */
+
+.myPage {
+  height: auto;
+  width: 400px;
+  margin: 0 auto 40px;
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightslategray;
+}
+
+.myPage h2 {
+  font-size: 32px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+  padding-bottom: 24px;
+}
+
+.myPage-content {
+  margin: 16px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+.edit-btn {
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  margin: 32px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-btn:hover {
+  opacity: 0.8;
+}
+
+.edit {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: 14px;
+}
+
+/* ユーザー編集 */
+
+.edit_user input[type="submit"] {
+  margin-top: 16px;
+}

@@ -1,0 +1,58 @@
+<%= render 'shared/header' %>
+
+<div class="contents row">
+  <h2>Sign up</h2>
+  <div class="container">
+    <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field">
+        <%= f.label :nickname %><br />
+        <%= f.text_area :nickname %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email %>
+      </div>
+
+      <%if @sns_id.present? %>
+        <%= hidden_field_tag :sns_auth, true %>
+      <% else %>
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :birthday %><br />
+        <%= f.date_select :birthday, use_month_numbers: true,
+            prompt:'--', start_year: 1950, end_year: (Time.now.year - 3) %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up" %>
+      </div>
+    <% end %>
+    
+    <div class="sns-certification">
+      <div class="facebook">
+        <i class="fa-brands fa-facebook"></i><%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, method: :post%>
+      </div>
+      <div class="google">
+        <i class="fa-brands fa-google"></i><%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post%>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

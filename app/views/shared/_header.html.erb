@@ -1,8 +1,20 @@
 <header>
-  <h1>CHILLOUT<br><span>HAIR & BEAUTY</span></h1>
+  <div class="header-top">
+    <h1>CHILLOUT<br><span>HAIR & BEAUTY</span></h1>
+
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+        <li><%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "user-nickname" %></li>
+        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %>
+        <li><%= link_to 'Log in', new_user_session_path, class: "login" %></li>
+        <li><%= link_to 'Sign up', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+    </ul>
+  </div>
 
   <ul class="globalNavi">
-    <li><a><%= link_to 'HOME', '#' %></a></li>
+    <li><a><%= link_to 'HOME', '/' %></a></li>
     <li><a><%= link_to 'NEWS', '#' %></a></li>
     <li><a><%= link_to 'CONCEPT', '#' %></a></li>
     <li><a><%= link_to 'MENU', '#' %></a></li>
