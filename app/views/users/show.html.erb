@@ -1,0 +1,15 @@
+<%= render 'shared/header' %>
+
+<div class="myPage">
+  <h2>My page</h2>
+  <div class="myPage-content"><i class="fa-solid fa-scissors"></i>nickname :   <%= @user.nickname %></div>
+  <div class="myPage-content"><i class="fa-solid fa-scissors"></i>email :   <%= @user.email %></div>
+  <%# <p><i class="fa-solid fa-scissors"></i>gender: <%= @user.gender</p>  %>
+  <div class="myPage-content"><i class="fa-solid fa-scissors"></i>birthday :   <%= @user.birthday %></div>
+  <%# <p><i class="fa-solid fa-scissors"></i>profile: <%= @user.profile</p>  %>
+  <div class='edit-btn'>
+    <a href="#">Edit</a>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

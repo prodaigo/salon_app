@@ -1,3 +1,5 @@
+/* サインイン・ログイン共通CSS */
+
 .row {
   width: 400px;
   margin: 0 auto 40px;
@@ -112,4 +114,55 @@
 .facebook:hover,
 .google:hover {
   opacity: 0.6;
+}
+
+/* マイページ */
+
+.myPage {
+  height: auto;
+  width: 400px;
+  margin: 0 auto 40px;
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightslategray;
+}
+
+.myPage h2 {
+  font-size: 32px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+  padding-bottom: 24px;
+}
+
+.myPage-content {
+  margin: 16px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+.edit-btn {
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  margin: 32px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-btn:hover {
+  opacity: 0.8;
+}
+
+.edit-btn a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: 14px;
 }
