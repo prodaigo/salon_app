@@ -1,0 +1,40 @@
+<%= render 'shared/header' %>
+
+<div class="contents row">
+  <h2>Create Staff</h2>
+  <div class="container">
+    <%= form_with model: @staff, url: staffs_path, id: 'new_staff', class: 'new_staff', local: true do |f| %>
+
+      <div class="field">
+        <%= f.label :image %><br />
+        <%= f.file_field :image %>
+      </div>
+
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_area :name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :position %><br />
+        <%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
+      </div>
+
+      <div class="field">
+        <%= f.label :hobby %><br />
+        <%= f.text_area :hobby %>
+      </div>
+
+      <div class="field">
+        <%= f.label :introduction %><br />
+        <%= f.text_area :introduction %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Addition" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

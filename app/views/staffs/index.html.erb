@@ -1,0 +1,25 @@
+<%= render 'shared/header' %>
+
+<div class="staffs">
+  <h1 class="staff-title">STAFF</h1>
+  <% @staffs.each do |staff| %>
+    <div class="staff">
+      <div class="staff-image">
+        <%= link_to image_tag(staff.image, class:"img"), staff_path(staff.id) %>
+      </div> 
+      <div class="staff-name">
+        <i class="fa-solid fa-scissors"></i><%= staff.name %>
+      </div>
+      <div class="staff-position">
+        <i class="fa-solid fa-scissors"></i><%= staff.position.name %>
+      </div>
+    </div>
+  <% end %>
+  <% if user_signed_in? && current_user.admin? %>
+    <div class='create-btn'>
+      <%= link_to 'Create', new_staff_path %>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'shared/footer' %>

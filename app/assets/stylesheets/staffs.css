@@ -1,0 +1,214 @@
+/* スタッフ一覧 */
+
+.staffs {
+  width: 1000px;
+  height: auto;
+  margin: 40px auto;
+}
+
+.staff-title {
+  font-size: 35px;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 16px;
+  color: lightslategray;
+}
+
+.staff {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.img {
+  height: 250px;
+  width: 170px;
+  margin: 24px 12.5px 16px;
+}
+
+.img:hover {
+  opacity: 0.8;
+}
+
+.staff-name {
+  padding-bottom: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.staff-position {
+  font-size: 14px;
+}
+
+.create-btn {
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  margin: 32px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-btn:hover {
+  opacity: 0.8;
+}
+
+.create-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+/* スタッフ登録機能 */
+
+#staff_image {
+  margin: 8px auto 16px;
+}
+
+#staff_name,
+#staff_hobby {
+  width: 400px;
+  height: 24px;
+  margin: 8px auto 16px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+#staff_position_id {
+  margin: 8px auto 16px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+#staff_introduction {
+  width: 400px;
+  height: 70px;
+  margin: 8px auto 32px;
+  border-bottom: 1px solid lightslategray;
+}
+
+/* スタッフ詳細 */
+
+.staff-details {
+  width: 800px;
+  height: auto;
+  margin: 40px auto;
+  font-family: 'Oswald', sans-serif;
+}
+
+.staff-detail-title {
+  font-size: 35px;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 40px;
+  color: lightslategray;
+}
+
+.staff-detail {
+  display: flex;
+  justify-content: space-around;
+}
+
+.right-detail {
+  width: 50%;
+}
+
+.staff-detail-image {
+  width: 350px;
+  height: auto;
+}
+
+.left-detail {
+  width: 50%;
+}
+
+.staff-detail-name {
+  font-size: 25px;
+  font-weight: bolder;
+  margin: 8px 0 24px;
+}
+
+.staff-detail-position {
+  margin-bottom: 48px;
+}
+
+.staff-detail-hobby,
+.staff-detail-introduction {
+  margin-bottom: 24px;
+  line-height: 24px;
+}
+
+.staff-detail-sns {
+  display: flex;
+  justify-content: center;
+}
+
+.staff-twitter,
+.staff-facebook,
+.staff-instagram,
+.staff-youtube {
+  width: 130px;
+  text-align: center;
+  padding: 3px 0;
+  border-radius: 5px;
+  margin: 8px 24px;
+}
+
+.staff-twitter {
+  background-color: #1EA2F1;
+}
+
+.staff-facebook {
+  background-color: #1A77F2;
+}
+
+.staff-instagram {
+  background-color: #B93579;
+}
+
+.staff-youtube {
+  background-color: red;
+}
+
+.staff-twitter a,
+.staff-facebook a,
+.staff-instagram a,
+.staff-youtube a {
+  text-decoration: none;
+  color: white;
+}
+
+.staff-twitter:hover,
+.staff-facebook:hover,
+.staff-instagram:hover,
+.staff-youtube:hover {
+  opacity: 0.8;
+}
+
+.staff-detail-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-delete-btn {
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  background-color: black;
+  cursor: pointer;
+  margin: 40px 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-delete-btn:hover {
+  opacity: 0.8;
+}
+
+.edit-delete-btn a,
+.edit-delete-btn a {
+  text-decoration: none;
+  color: white;
+}

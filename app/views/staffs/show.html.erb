@@ -1,0 +1,54 @@
+<%= render 'shared/header' %>
+
+<div class="staff-details">
+  <h1 class="staff-detail-title">STAFF</h1>
+  <div class="staff-detail">
+    <div class="left-detail">
+      <%= image_tag @staff.image, class: "staff-detail-image" %>
+    </div>
+    <div class="right-detail">
+      <div class="staff-detail-name">
+        <%= @staff.name %>
+      </div>
+      <div class="staff-detail-position">
+        <%= @staff.position.name %>
+      </div>
+      <div class="staff-detail-hobby">
+        <i class="fa-solid fa-scissors"></i>hobby： <%= @staff.hobby %>
+      </div>
+      <div class="staff-detail-introduction">
+        <i class="fa-solid fa-scissors"></i>comment：<br><%= @staff.introduction %>
+      </div>
+      <div class="staff-detail-sns">
+        <div class="upper-sns">
+          <div class="staff-twitter">
+            <a href="#"><i class="fa-brands fa-twitter fa-fw"></i>Twitter</a>
+          </div>
+          <div class="staff-facebook">
+            <a href="#"><i class="fa-brands fa-facebook fa-fw"></i>facebook</a>
+          </div>
+        </div>
+        <div class="bottom-sns">
+          <div class="staff-instagram">
+            <a href="#"><i class="fa-brands fa-instagram fa-fw"></i>Instagram</a>
+          </div>
+          <div class="staff-youtube">
+            <a href="#"><i class="fa-brands fa-youtube fa-fw"></i>YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% if user_signed_in? && current_user.admin? %>
+    <div class="staff-detail-btn">
+      <div class='edit-delete-btn'>
+        <%= link_to 'Edit', edit_staff_path(@staff.id) %>
+      </div>
+      <div class='edit-delete-btn'>
+        <%= link_to 'Delete', staff_path(@staff.id), method: :delete %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'shared/footer' %>
