@@ -1,0 +1,90 @@
+/* スタッフ一覧 */
+
+.staffs {
+  width: 1000px;
+  height: auto;
+  margin: 40px auto;
+}
+
+.staff-title {
+  font-size: 35px;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 16px;
+  color: lightslategray;
+}
+
+.staff {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.img {
+  height: 250px;
+  width: 170px;
+  margin: 24px 12.5px 16px;
+}
+
+.img:hover {
+  opacity: 0.8;
+}
+
+.staff-name {
+  padding-bottom: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.staff-position {
+  font-size: 14px;
+}
+
+.create-btn {
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  margin: 32px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-btn:hover {
+  opacity: 0.8;
+}
+
+.create-staff {
+  text-decoration: none;
+  color: white;
+}
+
+/* スタッフ登録機能 */
+
+#staff_image {
+  margin: 8px auto 16px;
+}
+
+#staff_name,
+#staff_hobby {
+  width: 400px;
+  height: 24px;
+  margin: 8px auto 16px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+#staff_position_id {
+  margin: 8px auto 16px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+#staff_introduction {
+  width: 400px;
+  height: 70px;
+  margin: 8px auto 32px;
+  border-bottom: 1px solid lightslategray;
+}
