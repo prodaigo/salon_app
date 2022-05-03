@@ -1,7 +1,7 @@
 class StaffsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :destroy]
-  before_action :find_staff, only: [:show, :destroy]
-  before_action :move_to_index, only: [:new, :create, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :find_staff, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @staffs = Staff.order("position_id ASC")
@@ -14,13 +14,24 @@ class StaffsController < ApplicationController
   def create
     @staff = Staff.new(staff_params)
     if @staff.save
-      redirect_to staffs_path
+      redirect_to action: :index
     else
       render :new
     end
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @staff.update(staff_params)
+      redirect_to action: :show
+    else
+      render :edit
+    end
   end
 
   def destroy

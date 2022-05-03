@@ -17,7 +17,7 @@
   <% end %>
   <% if user_signed_in? && current_user.admin? %>
     <div class='create-btn'>
-      <%= link_to 'Create Staff', new_staff_path, class: "create-staff" %>
+      <%= link_to 'Create', new_staff_path %>
     </div>
   <% end %>
 </div>

@@ -42,10 +42,10 @@
   <% if user_signed_in? && current_user.admin? %>
     <div class="staff-detail-btn">
       <div class='edit-delete-btn'>
-        <%= link_to 'Edit', "#", class: "edit-staff" %>
+        <%= link_to 'Edit', edit_staff_path(@staff.id) %>
       </div>
       <div class='edit-delete-btn'>
-        <%= link_to 'Delete', staff_path(@staff.id), method: :delete, class: "delete-staff" %>
+        <%= link_to 'Delete', staff_path(@staff.id), method: :delete %>
       </div>
     </div>
   <% end %>

@@ -56,7 +56,7 @@
   opacity: 0.8;
 }
 
-.create-staff {
+.create-btn a {
   text-decoration: none;
   color: white;
 }
@@ -207,8 +207,8 @@
   opacity: 0.8;
 }
 
-.edit-staff,
-.delete-staff {
+.edit-delete-btn a,
+.edit-delete-btn a {
   text-decoration: none;
   color: white;
 }
