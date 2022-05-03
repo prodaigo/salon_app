@@ -1,7 +1,7 @@
 class StaffsController < ApplicationController
-  before_action :authenticate_user!, only: :new
-  before_action :find_staff, only: :show
-  before_action :move_to_index, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :destroy]
+  before_action :find_staff, only: [:show, :destroy]
+  before_action :move_to_index, only: [:new, :create, :destroy]
 
   def index
     @staffs = Staff.order("position_id ASC")
@@ -21,6 +21,11 @@ class StaffsController < ApplicationController
   end
 
   def show
+  end
+
+  def destroy
+    @staff.destroy
+    redirect_to action: :index
   end
 
   private

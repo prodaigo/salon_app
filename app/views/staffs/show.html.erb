@@ -45,7 +45,7 @@
         <%= link_to 'Edit', "#", class: "edit-staff" %>
       </div>
       <div class='edit-delete-btn'>
-        <%= link_to 'Delete', "#", class: "delete-staff" %>
+        <%= link_to 'Delete', staff_path(@staff.id), method: :delete, class: "delete-staff" %>
       </div>
     </div>
   <% end %>
