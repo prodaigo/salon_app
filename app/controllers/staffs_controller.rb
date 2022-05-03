@@ -1,5 +1,6 @@
 class StaffsController < ApplicationController
   before_action :authenticate_user!, only: :new
+  before_action :find_staff, only: :show
   before_action :move_to_index, only: [:new, :create]
 
   def index
@@ -19,10 +20,17 @@ class StaffsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def staff_params
     params.require(:staff).permit(:name,:position_id,:hobby, :introduction, :image).merge(user_id: current_user.id)
+  end
+
+  def find_staff
+    @staff = Staff.find(params[:id])
   end
 
   def move_to_index

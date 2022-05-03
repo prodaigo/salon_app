@@ -5,7 +5,7 @@
   <% @staffs.each do |staff| %>
     <div class="staff">
       <div class="staff-image">
-        <%= link_to image_tag(staff.image, class:"img"), "#" %>
+        <%= link_to image_tag(staff.image, class:"img"), staff_path(staff.id) %>
       </div> 
       <div class="staff-name">
         <i class="fa-solid fa-scissors"></i><%= staff.name %>
