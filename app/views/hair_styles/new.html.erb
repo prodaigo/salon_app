@@ -1,0 +1,35 @@
+<%= render 'shared/header' %>
+
+<div class="contents row">
+  <h2>Create HairStyle</h2>
+  <div class="container">
+    <%= form_with model: @hair, url: hair_styles_path, id: 'new_hair_style', class: 'new_hair_style', local: true do |f| %>
+
+      <div class="field">
+        <%= f.label :image %><br />
+        <%= f.file_field :image %>
+      </div>
+
+      <div class="field">
+        <%= f.label :style_name %><br />
+        <%= f.text_area :style_name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :gender %><br />
+        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"gender-select"}) %>
+      </div>
+
+      <div class="field">
+        <%= f.label :genre %><br />
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Addition" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>
