@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   resources :mains, only: :index
   resources :users, only: [:show, :edit, :update]
   resources :staffs
-  resources :hair_styles, only: [:index, :new, :create, :show]
+  resources :hair_styles
 end
 
