@@ -8,20 +8,14 @@
   <h2 class="hStyle">人気の髪型<br><span>HAIR STYLE</span></h2>
   <div class="loop_wrap">
     <ul>
-      <li><%= image_tag "hair1.jpg", alt: "髪型サンプル" %></li>
-      <li><%= image_tag "hair2.jpg", alt: "髪型サンプル" %></li>
-      <li><%= image_tag "hair3.jpg", alt: "髪型サンプル" %></li>
-      <li><%= image_tag "hair4.jpg", alt: "髪型サンプル" %></li>
-      <li><%= image_tag "hair5.jpg", alt: "髪型サンプル" %></li>
-      <li><%= image_tag "hair6.jpg", alt: "髪型サンプル" %></li>
+      <% @hairs.each do |hair| %>
+        <li><%= image_tag hair.image, alt: "髪型サンプル" %></li>
+      <% end %>
     </ul>
     <ul>
-      <li><%= image_tag "hair1.jpg", alt: "髪型サンプル" %></li>
-      <li><%= image_tag "hair2.jpg", alt: "髪型サンプル" %></li>
-      <li><%= image_tag "hair3.jpg", alt: "髪型サンプル" %></li>
-      <li><%= image_tag "hair4.jpg", alt: "髪型サンプル" %></li>
-      <li><%= image_tag "hair5.jpg", alt: "髪型サンプル" %></li>
-      <li><%= image_tag "hair6.jpg", alt: "髪型サンプル" %></li>
+      <% @hairs.each do |hair| %>
+        <li><%= image_tag hair.image, alt: "髪型サンプル" %></li>
+      <% end %>
     </ul>
   </div>
 </div>
