@@ -32,6 +32,7 @@
 .style-box {
   display: flex;
   justify-content: left;
+  flex-wrap: wrap;
 }
 
 .hair-style {
@@ -83,4 +84,53 @@
 
 #hair_style_genre_id {
   margin-bottom: 32px;
+}
+
+/* ヘアースタイル詳細 */
+
+.hair-style-details {
+  width: 100%;
+  height: auto;
+  margin: 40px auto;
+  font-family: 'Oswald', sans-serif;
+}
+
+.hair-style-detail {
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.top-detail {
+  display: flex;
+  justify-content: space-around;
+  margin: 32px 0 24px;
+}
+
+.main-hair-image {
+  width: 400px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.sub-hair-image {
+  width: 180px;
+  height: auto;
+  margin: 14px 0 8px;
+}
+
+.bottom-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.style-name {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.hair-style-detail-btn {
+  display: flex;
+  justify-content: center;
 }

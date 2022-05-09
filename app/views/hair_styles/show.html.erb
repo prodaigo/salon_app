@@ -1,0 +1,39 @@
+<%= render 'shared/header' %>
+
+<div class="hair-style-details">
+  <h1 class="hair-style-title">HAIR STYLE</h1>
+  <div class="hair-style-detail">
+    <div class="top-detail">
+      <div class="left-hair-image">
+        <%= image_tag @hair.image, class: "main-hair-image" %>
+        <h2>FRONT</h2>
+      </div>
+      <div class="right-hair-image">
+        <%= image_tag @hair.image, class: "sub-hair-image" %>
+        <h2>SIDE</h2>
+        <%= image_tag @hair.image, class: "sub-hair-image" %>
+        <h2>BACK</h2>
+      </div>
+    </div>
+    <div class="bottom-detail">
+      <div class="style-name">
+        <i class="fa-solid fa-scissors"></i><%= @hair.style_name %>
+      </div>
+      <div class="style-genre">
+        <%= @hair.gender.name %> / <%= @hair.genre.name %>
+      </div>
+    </div>
+  </div>
+  <% if user_signed_in? && current_user.admin? %>
+    <div class="hair-style-detail-btn">
+      <div class='edit-delete-btn'>
+        <%= link_to 'Edit', edit_hair_style_path(@hair.id) %>
+      </div>
+      <div class='edit-delete-btn'>
+        <%= link_to 'Delete', hair_style_path(@hair.id), method: :delete %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'shared/footer' %> 
