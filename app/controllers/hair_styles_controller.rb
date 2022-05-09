@@ -42,7 +42,7 @@ class HairStylesController < ApplicationController
   private
 
   def hair_params
-    params.require(:hair_style).permit(:style_name, :gender_id, :genre_id, :image).merge(user_id: current_user.id)
+    params.require(:hair_style).permit(:style_name, :gender_id, :genre_id, images: []).merge(user_id: current_user.id)
   end
 
   def find_hair_style

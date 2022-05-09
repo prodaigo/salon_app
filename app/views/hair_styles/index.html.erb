@@ -9,7 +9,7 @@
         <% if hair.gender_id == 2 %> 
           <div class="hair-style">
             <div class="hair-style-image">
-              <%= link_to image_tag(hair.image, class:"style-img"), hair_style_path(hair.id) %>  
+              <%= link_to image_tag(hair.images[0], class:"style-img"), hair_style_path(hair.id) %>  
             </div> 
             <div class="hair-style-name">
               <i class="fa-solid fa-scissors"></i><%= hair.style_name %>
@@ -29,7 +29,7 @@
         <% if hair.gender_id == 3 %> 
           <div class="hair-style">
             <div class="hair-style-image">
-              <%= link_to image_tag(hair.image, class:"style-img"), hair_style_path(hair.id) %>  
+              <%= link_to image_tag(hair.images[0], class:"style-img"), hair_style_path(hair.id) %>  
             </div> 
             <div class="hair-style-name">
               <i class="fa-solid fa-scissors"></i><%= hair.style_name %>

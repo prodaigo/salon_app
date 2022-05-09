@@ -5,13 +5,13 @@
   <div class="hair-style-detail">
     <div class="top-detail">
       <div class="left-hair-image">
-        <%= image_tag @hair.image, class: "main-hair-image" %>
+        <%= image_tag @hair.images[0], class: "main-hair-image" %>
         <h2>FRONT</h2>
       </div>
       <div class="right-hair-image">
-        <%= image_tag @hair.image, class: "sub-hair-image" %>
-        <h2>SIDE</h2>
-        <%= image_tag @hair.image, class: "sub-hair-image" %>
+        <%= image_tag @hair.images[1], class: "sub-hair-image" %>
+        <h2 class="side-image-title">SIDE</h2>
+        <%= image_tag @hair.images[2], class: "sub-hair-image" %>
         <h2>BACK</h2>
       </div>
     </div>

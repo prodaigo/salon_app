@@ -63,8 +63,12 @@
 
 /* ヘアースタイル登録 */
 
-#hair_style_image {
-  margin: 8px auto 16px;
+#hair_style_images {
+  margin: 8px auto 8px;
+}
+
+#hair_style_images:last-child {
+  margin-bottom: 16px;
 }
 
 #hair_style_style_name {
@@ -109,14 +113,18 @@
 
 .main-hair-image {
   width: 400px;
-  height: auto;
+  height: 600px;
   margin-bottom: 8px;
 }
 
 .sub-hair-image {
   width: 180px;
-  height: auto;
-  margin: 14px 0 8px;
+  height: 270px;
+  margin-bottom: 8px;
+}
+
+.side-image-title {
+  margin-bottom: 36px;
 }
 
 .bottom-detail {

@@ -9,12 +9,12 @@
   <div class="loop_wrap">
     <ul>
       <% @hairs.each do |hair| %>
-        <li><%= image_tag hair.image, alt: "髪型サンプル" %></li>
+        <li><%= link_to image_tag(hair.images[0], alt: "髪型サンプル"), hair_style_path(hair.id) %></li>
       <% end %>
     </ul>
     <ul>
       <% @hairs.each do |hair| %>
-        <li><%= image_tag hair.image, alt: "髪型サンプル" %></li>
+        <li><%= link_to image_tag(hair.images[0], alt: "髪型サンプル"), hair_style_path(hair.id) %></li>
       <% end %>
     </ul>
   </div>

@@ -1,6 +1,6 @@
 class HairStyle < ApplicationRecord
   belongs_to :user
-  has_one_attached :image
+  has_many_attached :images
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :gender
@@ -10,6 +10,6 @@ class HairStyle < ApplicationRecord
     validates :style_name
     validates :gender_id, numericality: { other_than: 1, message: "can't be blank" }
     validates :genre_id, numericality: { other_than: 1, message: "can't be blank" }
-    validates :image
+    validates :images
   end
 end

@@ -6,8 +6,10 @@
     <%= form_with model: @hair, url: hair_styles_path, id: 'new_hair_style', class: 'new_hair_style', local: true do |f| %>
 
       <div class="field">
-        <%= f.label :image %><br />
-        <%= f.file_field :image %>
+        <%= f.label :images %><br />
+        <%= f.file_field :images, name: 'hair_style[images][]', data: {index: 0} %>
+        <%= f.file_field :images, name: 'hair_style[images][]', data: {index: 1} %>
+        <%= f.file_field :images, name: 'hair_style[images][]', data: {index: 2} %>
       </div>
 
       <div class="field">
