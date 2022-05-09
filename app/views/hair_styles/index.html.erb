@@ -1,0 +1,52 @@
+<%= render 'shared/header' %>
+
+<div class="hair-styles">
+  <h1 class="hair-style-title">HAIR STYLE</h1>
+  <div class="ladies-hair">
+    <h2 class="gender-title">MENS</h2>
+    <div class="style-box">
+      <% @hairs.each do |hair| %>
+        <% if hair.gender_id == 2 %> 
+          <div class="hair-style">
+            <div class="hair-style-image">
+              <%= link_to image_tag(hair.images[0], class:"style-img"), hair_style_path(hair.id) %>  
+            </div> 
+            <div class="hair-style-name">
+              <i class="fa-solid fa-scissors"></i><%= hair.style_name %>
+            </div>
+            <div class="hair-style-genre">
+              <i class="fa-solid fa-tag"></i><%= hair.genre.name %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="mens-hair">
+    <h2 class="gender-title">LADIES</h2>
+    <div class="style-box">
+      <% @hairs.each do |hair| %>
+        <% if hair.gender_id == 3 %> 
+          <div class="hair-style">
+            <div class="hair-style-image">
+              <%= link_to image_tag(hair.images[0], class:"style-img"), hair_style_path(hair.id) %>  
+            </div> 
+            <div class="hair-style-name">
+              <i class="fa-solid fa-scissors"></i><%= hair.style_name %>
+            </div>
+            <div class="hair-style-genre">
+              <i class="fa-solid fa-tag"></i><%= hair.genre.name %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <% if user_signed_in? && current_user.admin? %>
+    <div class='create-btn hair-create'>
+      <%= link_to 'Create', new_hair_style_path %>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'shared/footer' %>

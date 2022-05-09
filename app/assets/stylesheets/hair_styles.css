@@ -1,0 +1,144 @@
+/* ヘアースタイル一覧 */
+
+.hair-styles {
+  width: 1000px;
+  height: auto;
+  margin: 40px auto;
+  font-family: 'Oswald', sans-serif;
+}
+
+.hair-style-title {
+  font-size: 35px;
+  color: lightslategray;
+}
+
+.ladies-hair,
+.mens-hair {
+  height: auto;
+  width: 100%;
+}
+
+.gender-title {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 1px;
+  padding-bottom: 2px;
+  color: lightslategray;
+  border-bottom: 2px solid lightslategray;
+  width: 100px;
+  margin: 32px auto 8px;
+}
+
+.style-box {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.hair-style {
+  text-align: center;
+  width: 20%;
+  margin: 24px 0 0;
+}
+
+.style-img {
+  height: 250px;
+  width: 170px;
+  margin-bottom: 16px;
+}
+
+.style-img:hover {
+  opacity: 0.8;
+}
+
+.hair-style-name {
+  padding-bottom: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hair-style-position {
+  font-size: 14px;
+}
+
+/* ヘアースタイル登録 */
+
+#hair_style_images {
+  margin: 8px auto 8px;
+}
+
+#hair_style_images:last-child {
+  margin-bottom: 16px;
+}
+
+#hair_style_style_name {
+  width: 400px;
+  height: 24px;
+  margin: 8px auto 16px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+#hair_style_gender_id,
+#hair_style_genre_id {
+  margin: 8px auto 16px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+#hair_style_genre_id {
+  margin-bottom: 32px;
+}
+
+/* ヘアースタイル詳細 */
+
+.hair-style-details {
+  width: 100%;
+  height: auto;
+  margin: 40px auto;
+  font-family: 'Oswald', sans-serif;
+}
+
+.hair-style-detail {
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.top-detail {
+  display: flex;
+  justify-content: space-around;
+  margin: 32px 0 24px;
+}
+
+.main-hair-image {
+  width: 400px;
+  height: 600px;
+  margin-bottom: 8px;
+}
+
+.sub-hair-image {
+  width: 180px;
+  height: 270px;
+  margin-bottom: 8px;
+}
+
+.side-image-title {
+  margin-bottom: 36px;
+}
+
+.bottom-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.style-name {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.hair-style-detail-btn {
+  display: flex;
+  justify-content: center;
+}

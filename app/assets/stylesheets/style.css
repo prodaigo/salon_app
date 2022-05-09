@@ -147,6 +147,10 @@ h1 span {
   height: 100%;
 }
 
+.loop_wrap img:hover {
+  opacity: 0.8;
+}
+
 @keyframes loop {
   0% {
     transform: translateX(100%);
