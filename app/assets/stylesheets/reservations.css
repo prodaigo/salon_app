@@ -1,0 +1,17 @@
+/* 予約一覧 */
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 40px 0;
+}
+.reserve-title {
+  font-size: 35px;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 24px;
+  color: lightslategray;
+}
+
+.row {
+  
+}
