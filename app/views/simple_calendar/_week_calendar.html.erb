@@ -13,9 +13,9 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>時間</th>
+        <th>TIME</th>
         <% date_range.slice(0, 7).each do |day| %>
-          <th><%= t('date.abbr_day_names')[day.wday] %></th>
+          <th width="12%"><%= t('date.abbr_day_names')[day.wday] %></th>
         <% end %>
       </tr>
     </thead>
@@ -40,7 +40,7 @@
             <% week.each do |day| %>
               <td>
                 <% if check_reservation(reservations, day, time) %>
-                  <%= '×' %>
+                  <%= '✖️' %>
                 <% else %>
                   <%= link_to new_reservation_path(day: day, time: time) do %>
                     <%= '○' %>

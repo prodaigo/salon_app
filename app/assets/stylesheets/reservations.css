@@ -1,17 +1,161 @@
-/* 予約一覧 */
+/* 予約 */
 
-.container {
-  width: 100%;
-  height: auto;
-  margin: 40px 0;
+.reserve {
+  width: 70%;
+  margin: 0 auto 40px;
 }
+
 .reserve-title {
   font-size: 35px;
+  margin-bottom: 32px;
   font-family: 'Oswald', sans-serif;
-  margin-bottom: 24px;
   color: lightslategray;
 }
 
-.row {
-  
+.reserve-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  border: 1px solid lightslategray;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.text-center p {
+  padding-bottom: 24px;
+}
+
+/* カレンダー */
+
+.simple-calendar {
+  width: 800px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.calendar-heading {
+  margin: 16px auto 8px;
+  width: 90%;
+}
+
+.calendar-heading a {
+  text-decoration: none;
+}
+
+.table {
+  text-align: center;
+  margin: 0 auto 16px;
+  width: 90%;
+}
+
+.table th,
+.table td {
+  border-top: 1px solid lightslategray;
+  border-bottom: 1px solid lightslategray;
+  padding: 8px 0 8px;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #EFEFEF;
+}
+
+.table th {
+  background-color: white;
+}
+
+.table td a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #3F78BF;
+}
+
+/* 新規登録 */
+
+.new-reserve-row {
+  width: 450px;
+}
+
+.new-reserve {
+  padding-bottom: 24px;
+}
+
+.day label,
+.time label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  display: block;
+  padding: 8px 0;
+}
+
+.form-control {
+  width: 500px;
+  height: 24px;
+  padding-left: 8px;
+  margin-bottom: 8px;
+  border: 1px solid lightslategray;
+  border-radius: 2px;
+  background-color: #EFEFEF;
+}
+
+.btn-primary {
+  width: 120px;
+  height: 35px;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  background-color: black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 24px auto 8px;
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.text-right {
+  float: right;
+}
+
+.text-right:hover {
+  opacity: 0.8;
+}
+
+.text-right a {
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* 予約詳細 */
+
+.reserve-detail-title {
+  margin-bottom: 24px;
+}
+
+.reserve-detail div {
+  font-family: 'Oswald', sans-serif;
+  margin: 24px;
+}
+
+.reserve-detail p {
+  font-size: 16px;
+}
+
+.reserveTop-link {
+  margin-top: 16px;
+}
+
+.reserveTop-link:hover {
+  opacity: 0.8;
 }
