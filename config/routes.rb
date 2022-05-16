@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update]
   resources :staffs
   resources :hair_styles
+  resources :reservations, only: [:index, :new, :create, :show]
 end
 

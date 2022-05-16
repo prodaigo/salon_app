@@ -1,0 +1,25 @@
+<%= render 'shared/header' %>
+
+<div class="container">
+  <h1 class="reserve-title">RESERVE</h1>
+  <div class="row">
+    <div class="col-12 text-center title reserve-detail-title">
+      <h1>予約詳細画面</h1>
+    </div>
+    <div class="col-12 mt-3 text-center content reserve-detail">
+      <div >
+        <label><i class="fa-solid fa-scissors"></i><strong>DATE：</strong></label>
+        <p style="display:inline;"><%= @reservation.day %></p>
+      </div>
+      <div>
+        <label><i class="fa-solid fa-scissors"></i><strong>TIME：</strong></label>
+        <p style="display:inline;"><%= @reservation.time %></p>
+      </div>
+    </div>
+    <div class="col-12 text-right reserveTop-link">
+      <%= link_to 'RESERVE TOP', reservations_path %>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

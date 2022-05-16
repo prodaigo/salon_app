@@ -86,7 +86,7 @@ password: 111111
 [![Image from Gyazo](https://i.gyazo.com/51dd14190aeb574c987fdaf6d4d31144.png)](https://gyazo.com/51dd14190aeb574c987fdaf6d4d31144)
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/e052a00102089b785c3d4519d8286605.png)](https://gyazo.com/e052a00102089b785c3d4519d8286605)
+[![Image from Gyazo](https://i.gyazo.com/3c9905e46346da357887cd8abab5f0ad.png)](https://gyazo.com/3c9905e46346da357887cd8abab5f0ad)
 
 # 開発環境
 ・フロントエンド<br>

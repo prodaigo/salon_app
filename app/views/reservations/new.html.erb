@@ -1,0 +1,33 @@
+<%= render 'shared/header' %>
+
+<div class="container">
+  <h1 class="reserve-title">RESERVE</h1>
+  <div class="row new-reserve-row">
+    <div class="col-12 text-center title">
+      <h1 class="new-reserve">新規予約画面</h1>
+    </div>
+    <div class="col-12 mt-3 content">
+      <%= form_with model: @reservation, local: true, class: 'form' do |form| %>
+      <%# <%= render 'layouts/error_messages', model: form.object %>
+      <div class="day form-group">
+        <%= form.label :day, 'DATE' %>
+        <%= form.text_field :day, class: 'form-control', value: @day, readonly: true %>
+      </div>
+      <div class="time form-group">
+        <%= form.label :time, 'TIME' %>
+        <%= form.text_field :time, class: 'form-control', value: @time, readonly: true %>
+      </div>
+      <%= form.hidden_field :user_id, value: current_user.id %>
+      <%= form.hidden_field :start_time, value: @start_time %>
+      <div class="submit">
+        <%= form.submit value: 'Reserve', class: 'btn btn-primary mx-auto d-block' %>
+      </div>
+    <% end %>
+    <div class="col-12 text-right">
+      <%= link_to 'BACK', reservations_path %>
+    </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>
