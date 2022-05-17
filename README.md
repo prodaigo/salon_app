@@ -9,8 +9,8 @@ https://salon-app-37743.herokuapp.com/
 
 # テスト用アカウント
 <Basic認証><br>
-username: daigo<br>
-password: 37743<br>
+ユーザー名: daigo<br>
+パスワード: 37743<br>
 <管理者><br>
 email: admin@test.com<br>
 password: admin11<br>
