@@ -1,0 +1,31 @@
+/* ニュース一覧 */
+
+.news {
+  width: 1000px;
+  height: auto;
+  margin: 40px auto;
+}
+
+.news-title {
+  font-size: 35px;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 16px;
+  color: lightslategray;
+}
+
+/* ニュース登録 */
+
+#new_title {
+  width: 400px;
+  height: 24px;
+  margin: 8px auto 16px;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+#new_content {
+  width: 400px;
+  height: 100px;
+  margin: 8px auto 32px;
+  border-bottom: 1px solid lightslategray;
+}
