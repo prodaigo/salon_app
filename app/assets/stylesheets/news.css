@@ -4,14 +4,53 @@
   width: 1000px;
   height: auto;
   margin: 40px auto;
+  font-family: 'Oswald', sans-serif;
 }
 
 .news-title {
   font-size: 35px;
   font-family: 'Oswald', sans-serif;
-  margin-bottom: 16px;
   color: lightslategray;
 }
+
+.news-table {
+  margin: 40px auto 0;
+  width: 700px;
+}
+
+.news-table th {
+  font-family: 'Oswald', sans-serif;
+  border-bottom: 1px solid lightslategray;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.left-th,
+.left-td {
+  width: 20%;
+  text-align: center;
+  border-bottom: 1px solid lightslategray;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.right-th,
+.right-td {
+  width: 80%;
+  border-bottom: 1px solid lightslategray;
+  padding: 16px 32px;
+}
+
+.right-td a {
+  text-decoration: none;
+  color: black;
+}
+
+.right-td a:hover {
+  opacity: 0.6;
+}
+
+
 
 /* ニュース登録 */
 

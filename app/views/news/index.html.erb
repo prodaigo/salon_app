@@ -1,0 +1,22 @@
+<%= render 'shared/header' %>
+
+<div class="news">
+  <h1 class="news-title">NEWS</h1>
+  <table class="news-table">
+    <tr>
+      <th class="left-th">更新日</th> <th class="right-th">タイトル</th>
+    </tr>
+    <% @news.each do |new| %>
+      <tr>
+        <td class="left-td"><%= new.updated_at.strftime("%Y.%m.%d") %></td> <td class="right-td"><%= link_to new.title, '#' %></td>
+      </tr>
+    <% end %>
+  </table>
+  <% if user_signed_in? && current_user.admin? %>
+    <div class='create-btn'>
+      <%= link_to 'Create', new_news_path %>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'shared/footer' %>
