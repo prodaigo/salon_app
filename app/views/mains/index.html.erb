@@ -23,18 +23,12 @@
 <div class="newsSection">
   <h2 class="hStyle">お知らせ<br><span>NEWS</span></h2>
   <table>
-    <tr>
-      <th><%= "2022.04.20" %></th>
-      <td><%= "5/1はお休みさせていただきます" %></td>
-    </tr>
-    <tr>
-      <th><%= "2022.04.10" %></th>
-      <td><%= "新しい本を入荷しました" %></td>
-    </tr>
-    <tr>
-      <th><%= "2022.04.01" %></th>
-      <td><%= "リニューアルオープンしました" %></td>
-    </tr>
+    <% @news.each do |new| %>
+      <tr>
+        <th><%= new.updated_at.strftime("%Y.%m.%d") %></th>
+        <td><%= link_to new.title, '#' %></td>
+      </tr>
+    <% end %>
   </table>
 </div>
 
