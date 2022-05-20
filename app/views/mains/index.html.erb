@@ -22,14 +22,16 @@
 
 <div class="newsSection">
   <h2 class="hStyle">お知らせ<br><span>NEWS</span></h2>
-  <table>
-    <% @news.each do |new| %>
-      <tr>
-        <th><%= new.updated_at.strftime("%Y.%m.%d") %></th>
-        <td><%= link_to new.title, '#' %></td>
-      </tr>
-    <% end %>
-  </table>
+  <div class="main-news">
+    <table>
+      <% @news.each do |new| %>
+        <tr>
+          <th><%= new.updated_at.strftime("%Y.%m.%d") %></th>
+          <td><%= link_to new.title, '#' %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 </div>
 
 <div class="informationSection">

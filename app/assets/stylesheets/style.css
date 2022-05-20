@@ -183,6 +183,11 @@ h1 span {
 
 /* 画像無限ループ */
 
+.main-news {
+  height: 150px;
+  overflow: scroll;
+}
+
 .newsSection table {
   width: 100%;
   border-top: 1px solid #dddddd;
@@ -195,7 +200,7 @@ h1 span {
   border-bottom: 1px solid #dddddd;
   padding-bottom: 16px;
   padding-top: 16px;
-  width: 10%;
+  width: 15%;
 }
 
 .newsSection td {
@@ -203,7 +208,7 @@ h1 span {
   border-bottom: 1px solid #dddddd;
   padding-bottom: 16px;
   padding-top: 16px;
-  width: 90%;
+  width: 85%;
 }
 
 .newsSection td a {
