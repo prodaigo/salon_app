@@ -12,6 +12,9 @@
       </tr>
     <% end %>
   </table>
+
+  <%= paginate @news %>
+
   <% if user_signed_in? && current_user.admin? %>
     <div class='create-btn'>
       <%= link_to 'Create', new_news_path %>
