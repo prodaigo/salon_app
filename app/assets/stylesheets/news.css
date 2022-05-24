@@ -50,7 +50,34 @@
   opacity: 0.6;
 }
 
+/* ページネーション */
 
+.pagination{
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.pagination li {
+  list-style: none;
+}
+
+.pagination li a {
+  border: none;
+  text-decoration: none;
+  color: black;
+  padding: 0 8px;
+}
+
+.pagination>.active>a {
+  background: black;
+  color: white;
+  border-radius: 15px;
+}
+
+.pagination li a:hover {
+  border-radius: 15px;
+}
 
 /* ニュース登録 */
 
