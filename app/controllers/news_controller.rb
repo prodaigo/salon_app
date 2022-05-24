@@ -1,5 +1,6 @@
 class NewsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
+  before_action :find_news, only: [:show]
   before_action :move_to_index, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -19,12 +20,18 @@ class NewsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def new_params
     params.require(:new).permit(:title, :content).merge(user_id: current_user.id)
   end
 
+  def find_news
+    @new = New.find(params[:id])
+  end
 
   def move_to_index
     redirect_to action: :index unless current_user.admin?

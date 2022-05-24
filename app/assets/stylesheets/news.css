@@ -95,3 +95,42 @@
   margin: 8px auto 32px;
   border-bottom: 1px solid lightslategray;
 }
+
+/* ニュース詳細 */
+
+.news-details {
+  font-family: 'Oswald', sans-serif;
+  margin: 40px 0;
+}
+
+.news-detail {
+  width: 700px;
+  height: 250px;
+  margin: 48px auto 0;
+}
+
+.news-detail-date {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.news-detail-title {
+  text-align: center;
+  margin: 0 auto 32px;
+  padding-bottom: 4px;
+  width: 500px;
+  font-size: 24px;
+  border-bottom: 1px solid lightslategray;
+}
+
+.news-detail-content {
+  text-align: center;
+  
+}
+
+.news-detail-btn {
+  display: flex;
+  justify-content: center;
+}
+
+

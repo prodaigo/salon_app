@@ -8,7 +8,7 @@
     </tr>
     <% @news.each do |new| %>
       <tr>
-        <td class="left-td"><%= new.updated_at.strftime("%Y.%m.%d") %></td> <td class="right-td"><%= link_to new.title, '#' %></td>
+        <td class="left-td"><%= new.updated_at.strftime("%Y.%m.%d") %></td> <td class="right-td"><%= link_to new.title, news_path(new.id) %></td>
       </tr>
     <% end %>
   </table>

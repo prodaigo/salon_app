@@ -1,0 +1,29 @@
+<%= render 'shared/header' %>
+
+<div class="news-details">
+  <h1 class="news-title">NEWS</h1>
+  <div class="news-detail">
+    <div class="news-detail-date">
+      <%= @new.updated_at.strftime("%Y.%m.%d") %>
+    </div>
+    <div class="news-detail-title">
+      <%= @new.title %>
+    </div>
+    <div class="news-detail-content">
+      <%= @new.content %>
+    </div>
+  </div>
+  
+  <% if user_signed_in? && current_user.admin? %>
+    <div class="news-detail-btn">
+      <div class='edit-delete-btn'>
+        <%= link_to 'Edit', "#" %>
+      </div>
+      <div class='edit-delete-btn'>
+        <%= link_to 'Delete', "#", method: :delete %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'shared/footer' %>
