@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
-  before_action :find_news, only: [:show]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :find_news, only: [:show, :edit, :update]
   before_action :move_to_index, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -21,6 +21,17 @@ class NewsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @new.update(new_params)
+      redirect_to action: :show
+    else
+      render :edit
+    end
   end
 
   private
