@@ -110,7 +110,7 @@
 }
 
 .news-detail-date {
-  text-align: left;
+  text-align: center;
   margin-bottom: 16px;
 }
 
@@ -125,7 +125,7 @@
 
 .news-detail-content {
   text-align: center;
-  
+
 }
 
 .news-detail-btn {
