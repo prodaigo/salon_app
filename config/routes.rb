@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :staffs
   resources :hair_styles
   resources :reservations, only: [:index, :new, :create, :show]
+  resources :news
 end
 

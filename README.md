@@ -9,8 +9,8 @@ https://salon-app-37743.herokuapp.com/
 
 # テスト用アカウント
 <Basic認証><br>
-username: daigo<br>
-password: 37743<br>
+ユーザー名: daigo<br>
+パスワード: 37743<br>
 <管理者><br>
 email: admin@test.com<br>
 password: admin11<br>
@@ -66,19 +66,23 @@ password: 111111
 登録したヘアースタイルの一覧を確認できる。登録の際の選択により、メンズとレディースの表示が分けられる。
 
 [![Image from Gyazo](https://i.gyazo.com/1b7f42fd3ab9a6626a54d0eb66bbac34.jpg)](https://gyazo.com/1b7f42fd3ab9a6626a54d0eb66bbac34)
-**ヘアースタイル詳細****：<br>
+**ヘアースタイル詳細**：<br>
 一覧ページ・メインページで選択したヘアースタイルの詳細を確認できる。登録時にFRONT・SIDE・BACKの画像を登録することで３方向から確認できる。
+
+## ニュース管理
+[![Image from Gyazo](https://i.gyazo.com/25f168aca37a21f6de0ca950add310c5.png)](https://gyazo.com/25f168aca37a21f6de0ca950add310c5)
+**ニュース一覧**: <br>
+登録したニュースを一覧で確認できる。ページネーション機能で最大5件のニュースが表示される。
 
 # 実装予定の機能
 ## 一般ユーザー
-4. 予約管理（新規登録・詳細・編集・削除）
-5. 店舗情報確認（一覧・詳細）
+4. 予約管理（編集・削除）
 6. コメント管理（新規投稿・編集・削除）
 7. 商品確認（一覧・詳細）
 
 ## 管理者
 4. 予約管理（編集・削除）
-5. 店舗情報管理（新規登録・編集・削除）
+5. 店舗情報管理（削除）
 6. コメント管理（編集・削除）
 7. 商品管理（新規登録・編集・削除）
 
