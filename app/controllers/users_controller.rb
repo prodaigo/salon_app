@@ -31,8 +31,6 @@ class UsersController < ApplicationController
 
   def move_to_root
     set_user
-    unless @user == current_user  || current_user.admin?
-      redirect_to root_path
-    end
+    redirect_to root_path unless @user == current_user || current_user.admin?
   end
 end

@@ -5,7 +5,7 @@ class Position < ActiveHash::Base
     { id: 3, name: 'ディレクター' },
     { id: 4, name: 'トップスタイリスト' },
     { id: 5, name: 'スタイリスト' },
-    { id: 6, name: 'アシスタント' },
+    { id: 6, name: 'アシスタント' }
   ]
 
   include ActiveHash::Associations

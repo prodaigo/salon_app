@@ -2,18 +2,16 @@ class ReservationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @reservations = Reservation.all.where("day >= ?", Date.current).where("day < ?", Date.current >> 3).order(day: :desc)
+    @reservations = Reservation.all.where('day >= ?', Date.current).where('day < ?', Date.current >> 3).order(day: :desc)
   end
 
   def new
     @reservation = Reservation.new
     @day = params[:day]
     @time = params[:time]
-    @start_time = DateTime.parse(@day + " " + @time + " " + "JST")
+    @start_time = DateTime.parse(@day + ' ' + @time + ' ' + 'JST')
     message = Reservation.check_reservation_day(@day.to_date)
-    if !!message
-      redirect_to @reservation, flash: { alert: message }
-    end
+    redirect_to @reservation, flash: { alert: message } if !!message
   end
 
   def create

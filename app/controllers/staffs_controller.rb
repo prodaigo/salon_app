@@ -4,7 +4,7 @@ class StaffsController < ApplicationController
   before_action :move_to_index, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @staffs = Staff.order("position_id ASC")
+    @staffs = Staff.order('position_id ASC')
   end
 
   def new
@@ -42,7 +42,7 @@ class StaffsController < ApplicationController
   private
 
   def staff_params
-    params.require(:staff).permit(:name,:position_id,:hobby, :introduction, :image).merge(user_id: current_user.id)
+    params.require(:staff).permit(:name, :position_id, :hobby, :introduction, :image).merge(user_id: current_user.id)
   end
 
   def find_staff

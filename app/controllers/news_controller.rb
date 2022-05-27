@@ -4,7 +4,7 @@ class NewsController < ApplicationController
   before_action :move_to_index, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @news = New.order("updated_at DESC").page(params[:page]).per(5)
+    @news = New.order('updated_at DESC').page(params[:page]).per(5)
   end
 
   def new

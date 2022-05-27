@@ -4,7 +4,7 @@ class HairStylesController < ApplicationController
   before_action :move_to_index, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @hairs = HairStyle.order("genre_id ASC")
+    @hairs = HairStyle.order('genre_id ASC')
   end
 
   def new
