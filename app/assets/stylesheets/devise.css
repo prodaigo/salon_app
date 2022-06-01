@@ -25,10 +25,6 @@
   font-weight: normal;
 }
 
-.field em {
-  font-family: 'Oswald', sans-serif;
-}
-
 #user_nickname {
   width: 400px;
   height: 24px;
